@@ -41,7 +41,6 @@ print(password_list)
 # Join the list into a string for the final password
 #password = ''.join(password_list)
 
-
 password = ""
 for char in password_list:
     password += char
