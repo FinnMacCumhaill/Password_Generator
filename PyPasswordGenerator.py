@@ -12,14 +12,6 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input("How many symbols would you like?\n"))
 nr_numbers = int(input("How many numbers would you like?\n"))
 
-# Randomly select the specified number of letters, symbols, and numbers
-#random_letters = random.sample(letters, nr_letters)
-#random_symbols = random.sample(symbols, nr_symbols)
-#random_numbers = random.sample(numbers, nr_numbers)
-
-# Combine all the selected characters
-#password_list = random_letters + random_symbols + random_numbers
-
 password_list = []
 
 for char in range(0, nr_letters):
@@ -29,17 +21,10 @@ for char in range(0, nr_numbers):
     password_list += random.choice(numbers)
 
 for char in range(0, nr_symbols):
-    password_list += random.choice(symbols)
-
-print(password_list)    
+    password_list += random.choice(symbols) 
 
 # Shuffle the combined list to ensure randomness
 random.shuffle(password_list)
-
-print(password_list)
-
-# Join the list into a string for the final password
-#password = ''.join(password_list)
 
 password = ""
 for char in password_list:
